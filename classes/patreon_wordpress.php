@@ -736,18 +736,7 @@ class Patreon_Wordpress {
 			update_option( 'patreon-gdpr-notice-shown', 1 );
 			
 		}
-	
-		if( get_option( 'patreon-wordpress-update-available', false ) ) {
 			
-			?>
-				 <div class="notice notice-info is-dismissible patreon-wordpress" id="patreon-wordpress-update-available">
-				 <h3>New version of Patreon WordPress is available</h3>
-					<p>To be able to receive the latest features, security and bug fixes, please update your plugin by <a href="<?php echo wp_nonce_url( get_admin_url() . 'update.php?action=upgrade-plugin&plugin=' . PATREON_WORDPRESS_PLUGIN_SLUG,'upgrade-plugin_' . PATREON_WORDPRESS_PLUGIN_SLUG ); ?>">clicking here</a>.</p>
-				</div>
-			<?php
-			
-		}
-		
 		if( get_option( 'patreon-wordpress-app-credentials-success', false ) ) {
 			
 			?>
